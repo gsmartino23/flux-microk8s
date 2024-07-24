@@ -1,0 +1,14 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: pulsar-system
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  path: ./clusters/microk8s-vm/pulsar-system
+  prune: true
+  targetNamespace: pulsar-system
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+    namespace: flux-system
