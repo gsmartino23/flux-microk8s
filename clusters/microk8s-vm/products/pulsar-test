@@ -1,0 +1,30 @@
+apiVersion: cloudcomponent.toolkit.pulsar.codes/v1alpha1
+kind: Product
+metadata:
+  labels:
+    app.kubernetes.io/name: pulsar-controller
+    app.kubernetes.io/managed-by: kustomize
+  name: product-sample
+spec:
+  description: "Test de product"
+  jiraProject: 209302
+  jiraIssue: "pepe-2323"
+  modules:
+   - "module1"
+   - "module2"
+  repos:
+	- name: "migraine"
+	  type: "API"
+	- name: "caucau"
+	  type: "Library"
+	- name: "actions-test"
+	  type: "Frontend"
+  roles:
+    - name: maintainers
+      users:
+      - "guillermo-martino_cencosud"
+      - "geanpierre-ugazmauricio_cencosud"
+    - name: developers
+      users:
+      - "yliana-otero_cencosud"
+      - "nelson-villagran_cencosud"
